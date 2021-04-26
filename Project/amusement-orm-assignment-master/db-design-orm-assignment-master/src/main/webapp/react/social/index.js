@@ -3,6 +3,9 @@ import UserFormEditor from "./users/user-form-editor";
 
 import PassList from "./pass/pass-list";
 import PassFormEditor from "./pass/pass-form-editor";
+import ParkList from "./parks/park-list";
+
+import ParkFormEditor from "./parks/park-form-editor";
 
 const {HashRouter, Route} = window.ReactRouterDOM;
 const App = () => {
@@ -21,6 +24,13 @@ const App = () => {
                 </Route>
                 <Route path="/passes/:id" exact={true}>
                     <PassFormEditor/>
+                </Route>
+
+                <Route path={["/parks", "/"]} exact={true}>
+                    <ParkList/>
+                </Route>
+                <Route path="/parks/:id" exact={true}>
+                    <ParkFormEditor/>
                 </Route>
             </HashRouter>
         </div>

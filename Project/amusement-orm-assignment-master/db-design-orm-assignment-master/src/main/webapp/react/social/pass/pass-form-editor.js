@@ -19,6 +19,7 @@ const PassFormEditor = () => {
     const createPass = (pass) =>
         passService.createPass(pass)
             .then(() => history.goBack())
+
     const updatePass = (id, newPass) =>
         passService.updatePass(id, newPass)
             .then(() => history.goBack())
@@ -35,7 +36,7 @@ const PassFormEditor = () => {
                 className = "form-control"
                 onChange={(e) =>
                     setPass(pass =>
-                        ({...pass, name: e.target.value}))}
+                        ({...pass, description: e.target.value}))}
                 value={pass.description}/>
             <br/>
 
@@ -57,7 +58,7 @@ const PassFormEditor = () => {
             <br/>
 
             <label>Price</label>
-            <input
+            <input type="number"
                 className = "form-control"
                 onChange={(e) =>
                     setPass(pass =>
@@ -70,7 +71,7 @@ const PassFormEditor = () => {
                 checked={pass.foodPack}
                 onChange={(e) =>
                     setPass(pass =>
-                        ({...pass, foodPack: e.target.value}))}
+                        ({...pass, foodPack: e.target.checked}))}
                    value={pass.foodPack}/>
             <br/>
 
@@ -79,10 +80,27 @@ const PassFormEditor = () => {
                    checked={pass.fastPass}
                 onChange={(e) =>
                     setPass(pass =>
-                        ({...pass, fastPass: e.target.value}))}
+                        ({...pass, fastPass: e.target.checked}))}
                    value={pass.fastPass}/>
             <br/>
-
+            {/*todo, map it to park*/}
+            <label>Park ID </label>
+            <input type="number" name="parkId"
+                   checked={pass.parkId}
+                   onChange={(e) =>
+                       setPass(pass =>
+                           ({...pass, parkId: e.target.value}))}
+                   value={pass.parkId}/>
+            <br/>
+            {/*todo, map it to user*/}
+            <label>User ID </label>
+            <input type="number" name="userId"
+                   checked={pass.userId}
+                   onChange={(e) =>
+                       setPass(pass =>
+                           ({...pass, userId: e.target.value}))}
+                   value={pass.userId}/>
+            <br/>
             <button
                 onClick={() => {
                     history.goBack()

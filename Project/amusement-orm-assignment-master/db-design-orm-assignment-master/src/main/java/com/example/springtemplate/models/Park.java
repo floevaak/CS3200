@@ -42,6 +42,10 @@ public class Park {
     public void setRevenue(Integer revenue) { this.revenue = revenue; }
     public Boolean getLights() {return lights; }
 
+    public void setLights(boolean lights) {
+        this.lights = lights;
+    }
+
     public Timestamp getCreated() { return created; }
     public void setCreated(Timestamp created) { this.created = created; }
     public Timestamp getUpdated() { return updated; }

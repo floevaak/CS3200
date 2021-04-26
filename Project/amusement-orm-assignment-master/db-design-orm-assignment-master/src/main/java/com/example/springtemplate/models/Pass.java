@@ -15,7 +15,7 @@ public class Pass {
     private Integer price;
 
     @Column(name="description")
-    private Integer description;
+    private String description;
 
     @Column(name="start_date")
     private String startDate;
@@ -81,11 +81,11 @@ public class Pass {
     public Pass() {
     }
 
-    public Integer getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Integer description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 }

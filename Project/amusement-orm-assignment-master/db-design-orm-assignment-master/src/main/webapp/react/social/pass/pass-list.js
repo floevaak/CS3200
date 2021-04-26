@@ -23,22 +23,22 @@ const PassList = () => {
         */
 
         <div>
-            <h2>Pass</h2>
+            <h2>Admission Passes</h2>
             <button onClick={() => history.push("/passes/new")}>
                 Add Pass
             </button>
             <ul className="list-group">
                 {
                     passes.map(pass =>
-                        <li class="list-group-item" key={pass.id}>
+                        <li className="list-group-item" key={pass.id}>
                             <Link to={`/passes/${pass.id}`}>
-                                {pass.id},
-                                {pass.description},
-                                {pass.price},
+                                Description: {pass.description},
+                                Price: {pass.price},
+
                                 {pass.startDate},
                                 {pass.endDate},
-                                {pass.foodPack},
-                                {pass.fastPass}
+                                Include Food Pack: {pass.foodPack},
+                                Include Fast Pass: {pass.fastPass}
 
                             </Link>
                         </li>)
