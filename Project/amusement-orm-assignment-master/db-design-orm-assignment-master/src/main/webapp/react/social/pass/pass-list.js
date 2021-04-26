@@ -32,10 +32,10 @@ const PassList = () => {
                     passes.map(pass =>
                         <li className="list-group-item" key={pass.id}>
                             <Link to={`/passes/${pass.id}`}>
-                                Description: {pass.description},
+                                {pass.description},
                                 Price: {pass.price},
-                                {pass.startDate},
-                                {pass.endDate},
+                                Start Date: {pass.startDate},
+                                End Date: {pass.endDate},
                                 {pass.foodPack? "Include Food Pack": ""},
                                 {pass.fastPass? "Include Fast Pass": ""}
                             </Link>

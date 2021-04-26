@@ -5,47 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46fa45d1-5381-4a96-ba80-198cd17dce21" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_blogs.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_follows.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_posts.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_ratings.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_replies.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_topics.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design/db_design_users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/db_design_2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/alter-table-blogs-add-topic-enumerated-type.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/alter-table-replies-add-replies-2-replies.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/create-table-blogs.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/create-table-follows.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/create-table-ratings.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/create-table-replies.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/create-table-topics.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/create-users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/drop-users.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/insert-topics.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/posts.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/querying-relational-databases/querying-relational-databases.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/other/sql/updating-relational-databases/updating-relational-databases.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/import/MyExport.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/import/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/courses/course-editor-form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/courses/course-editor-inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/courses/course-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/courses/course-service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/courses/courses.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/courses/generic-editor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/sections/section-editor-form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/sections/section-editor-inline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/sections/section-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/university/sections/section-service.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/users/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/users/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/users/users.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/users/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/social/pass/pass-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/react/social/pass/pass-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/react/social/users/user-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/react/social/users/user-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +100,7 @@
       <workItem from="1619299823870" duration="4927000" />
       <workItem from="1619307327135" duration="3000" />
       <workItem from="1619372016564" duration="6917000" />
-      <workItem from="1619477344729" duration="3502000" />
+      <workItem from="1619477344729" duration="3904000" />
     </task>
     <servers />
   </component>

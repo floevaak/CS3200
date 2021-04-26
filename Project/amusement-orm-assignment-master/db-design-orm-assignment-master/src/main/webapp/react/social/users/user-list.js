@@ -20,10 +20,10 @@ const UserList = () => {
             <ul className="list-group">
                 {
                     users.map(user =>
-                        <li key={user.id}>
+                        <li className="list-group-item" key={user.id}>
                             <Link to={`/users/${user.id}`}>
                                 {user.firstName},
-                                {user.lastName},
+                                {user.lastName}
                             </Link>
                         </li>)
                 }
