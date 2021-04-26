@@ -34,12 +34,10 @@ const PassList = () => {
                             <Link to={`/passes/${pass.id}`}>
                                 Description: {pass.description},
                                 Price: {pass.price},
-
                                 {pass.startDate},
                                 {pass.endDate},
-                                Include Food Pack: {pass.foodPack},
-                                Include Fast Pass: {pass.fastPass}
-
+                                {pass.foodPack? "Include Food Pack": ""},
+                                {pass.fastPass? "Include Fast Pass": ""}
                             </Link>
                         </li>)
                 }

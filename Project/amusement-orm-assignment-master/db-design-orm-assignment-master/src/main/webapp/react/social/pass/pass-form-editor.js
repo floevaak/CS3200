@@ -40,7 +40,7 @@ const PassFormEditor = () => {
                 value={pass.description}/>
             <br/>
 
-            <label>Start Date</label>
+            <label>Start Date (YYYY-MM-DD)</label>
             <input
                 className = "form-control"
                 onChange={(e) =>
@@ -48,7 +48,7 @@ const PassFormEditor = () => {
                         ({...pass, startDate: e.target.value}))}
                 value={pass.startDate}/>
             <br/>
-            <label>End Date</label>
+            <label>End Date (YYYY-MM-DD)</label>
             <input
                 className = "form-control"
                 onChange={(e) =>
