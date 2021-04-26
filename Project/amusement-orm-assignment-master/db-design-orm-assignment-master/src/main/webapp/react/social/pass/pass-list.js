@@ -4,7 +4,7 @@ import passService from "./pass-service"
 const { useState, useEffect } = React;
 const PassList = () => {
     const history = useHistory()
-    const [pass, setPass] = useState([])
+    const [passes, setPass] = useState([])
     useEffect(() => {
         findAllPasses()
     }, [])
@@ -24,14 +24,14 @@ const PassList = () => {
 
         <div>
             <h2>Pass</h2>
-            <button onClick={() => history.push("/pass/new")}>
+            <button onClick={() => history.push("/passes/new")}>
                 Add Pass
             </button>
             <ul className="list-group">
                 {
-                    pass.map(pass =>
+                    passes.map(pass =>
                         <li class="list-group-item" key={pass.id}>
-                            <Link to={`/pass/${pass.id}`}>
+                            <Link to={`/passes/${pass.id}`}>
                                 {pass.id},
                                 {pass.description},
                                 {pass.price},

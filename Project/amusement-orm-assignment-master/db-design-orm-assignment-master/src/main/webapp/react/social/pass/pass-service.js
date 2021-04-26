@@ -1,5 +1,5 @@
 // declare URL where server listens for HTTP requests, how to fix CORS filter error?
-const PASSES_URL = "http://localhost:8080/api/passes"
+const PASSES_URL = "http://localhost:8080/orm/passes"
 
 // TODO: retrieve all passes from the server
 export const findAllPasses = () =>

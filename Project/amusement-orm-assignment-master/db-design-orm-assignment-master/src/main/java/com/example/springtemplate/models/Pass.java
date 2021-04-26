@@ -14,6 +14,9 @@ public class Pass {
     @Column(name="price")
     private Integer price;
 
+    @Column(name="description")
+    private Integer description;
+
     @Column(name="start_date")
     private String startDate;
 
@@ -43,6 +46,10 @@ public class Pass {
     public String getStartDate() { return startDate; }
     public void setStartDate(String startDate) { this.startDate = startDate; }
     public String getEndDate() { return endDate; }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
     public void getEndDate(String endDate) { this.endDate = endDate; }
     public Boolean getFoodPack() { return foodPack; }
     public void setFoodPack(Boolean foodPack) { this.foodPack = foodPack; }
@@ -72,5 +79,13 @@ public class Pass {
 
     // default constructor
     public Pass() {
+    }
+
+    public Integer getDescription() {
+        return description;
+    }
+
+    public void setDescription(Integer description) {
+        this.description = description;
     }
 }

@@ -65,22 +65,22 @@ const PassFormEditor = () => {
                 value={pass.price}/>
             <br/>
 
-            <label>Food Pack</label>
-            <checkbox
-                className = "form-control"
+            <label>Food Pack </label>
+            <input type="checkbox" name = "foodPack"
+                checked={pass.foodPack}
                 onChange={(e) =>
                     setPass(pass =>
                         ({...pass, foodPack: e.target.value}))}
-                value={pass.foodPack}/>
+                   value={pass.foodPack}/>
             <br/>
 
-            <label>Fast Pass</label>
-            <checkbox
-                className = "form-control"
+            <label>Fast Pass </label>
+            <input type="checkbox" name="fastPass"
+                   checked={pass.fastPass}
                 onChange={(e) =>
                     setPass(pass =>
                         ({...pass, fastPass: e.target.value}))}
-                value={pass.fastPass}/>
+                   value={pass.fastPass}/>
             <br/>
 
             <button

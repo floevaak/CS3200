@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface PassRepository
         extends CrudRepository<Pass, Integer> {
-    @Query(value = "SELECT * FROM pass", nativeQuery = true)
+    @Query(value = "SELECT * FROM passes", nativeQuery = true)
     public List<Pass> findAllPasses();
     @Query(value = "SELECT * FROM passes WHERE id=:passId", nativeQuery = true)
     public Pass findPassById(@Param("passId") Integer passId);
