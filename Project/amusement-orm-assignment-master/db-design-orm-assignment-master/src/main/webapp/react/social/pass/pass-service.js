@@ -30,8 +30,8 @@ export const createPass = (pass) =>
 
 // update a pass by their ID
 export const updatePass = (id, pass) =>
-    fetch(`${PASSES_URL}/update/${id}`, {
-        method: 'POST',
+    fetch(`${PASSES_URL}/${id}`, {
+        method: 'PUT',
         body: JSON.stringify(pass),
         headers: {'content-type': 'application/json'}
     })
