@@ -44,7 +44,7 @@ public class PassOrmDao {
         return passRepository.findPassById(passId);
     }
 
-    @PutMapping("/orm/passes/{passId}/")
+    @PutMapping("/orm/passes/{passId}")
     public Pass updatePass(
             @PathVariable("passId") Integer id,
             @RequestBody Pass passUpdated) {

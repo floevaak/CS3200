@@ -60,6 +60,15 @@ const ParkFormEditor = () => {
                         ({...park, revenue: e.target.value}))}
                 value={park.revenue}/>
             <br/>
+
+            <label>Light </label>
+            <input type="checkbox" name="lights"
+                   checked={ park.lights }
+                onChange={(e) =>
+                    setPark(park =>
+                        ({...park, lights: e.target.checked}))}
+                value={park.lights}/>
+            <br/>
             <button
                 onClick={() => {
                     history.goBack()

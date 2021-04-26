@@ -34,7 +34,7 @@ const InlineParkEditor = ({park, deletePark, updatePark}) => {
                             onChange={(e)=>setParkCopy(parkCopy => ({...parkCopy, revenue: e.target.value}))}/>
                     </div>
                     <div className="col">
-                        <input
+                        <input type="checkbox"
                             className="form-control"
                             value={parkCopy.lights}
                             onChange={(e)=>setParkCopy(parkCopy => ({...parkCopy, lights: e.target.value}))}/>
