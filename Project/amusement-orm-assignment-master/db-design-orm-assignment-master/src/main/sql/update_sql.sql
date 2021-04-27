@@ -1,5 +1,5 @@
-ALTER TABLE passes
-    ADD COLUMN description VARCHAR(45) AFTER id;
+--ALTER TABLE passes
+  --  ADD COLUMN description VARCHAR(45) AFTER id;
 
 UPDATE passes
 SET user_id = 3
