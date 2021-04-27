@@ -28,8 +28,8 @@ const InlineUserEditor = ({user, deleteUser, updateUser}) => {
                             onChange={(e)=>setUserCopy(userCopy => ({...userCopy, username: e.target.value}))}/>
                     </div>
                     {/*<div className="col-1">*/}
-                    {/*    <Link to={`/users/${userCopy.id}/`}>*/}
-                    {/*        Blogs*/}
+                    {/*    <Link to={`/users/${userCopy.id}/passes`}>*/}
+                    {/*        Passes*/}
                     {/*    </Link>*/}
                     {/*</div>*/}
                     <div className="col-2">
@@ -64,7 +64,7 @@ const InlineUserEditor = ({user, deleteUser, updateUser}) => {
                         </Link>
                     </div>
                     {/*<div className="col-1">*/}
-                    {/*    <Link to={`/users/${userCopy.id}/`}>*/}
+                    {/*    <Link to={`/users/${userCopy.id}/passes`}>*/}
                     {/*        Blogs*/}
                     {/*    </Link>*/}
                     {/*</div>*/}

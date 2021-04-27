@@ -17,27 +17,34 @@ const InlinePassEditor = ({pass, deletePass, updatePass}) => {
                     </div>
                     <div className="col">
                         <input type="number"
-                            className="form-control"
-                            value={passCopy.price}
-                            onChange={(e)=>setPassCopy(passCopy => ({...passCopy, price: e.target.value}))}/>
+                               className="form-control"
+                               value={passCopy.price}
+                               onChange={(e)=>setPassCopy(passCopy => ({...passCopy, price: e.target.value}))}/>
                     </div>
                     <div className="col">
-                        <input type="checkbox"
-                            className="form-control"
-                            value={passCopy.fastPass}
-                            onChange={(e)=>setPassCopy(passCopy => ({...passCopy, fastPass: e.target.value}))}/>
+                        <input
+                               className="form-control"
+                               value={passCopy.fastPass}
+                               onChange={(e)=>setPassCopy(passCopy => ({...passCopy, fastPass: e.target.value}))}/>
                     </div>
                     <div className="col">
-                        <input type="checkbox"
+                        <input
                                className="form-control"
                                value={passCopy.foodPack}
                                onChange={(e)=>setPassCopy(passCopy => ({...passCopy, foodPack: e.target.value}))}/>
                     </div>
-                    {/*<div className="col-1">*/}
-                    {/*    <Link to={`/pass/${passCopy.id}/`}>*/}
-                    {/*        Blogs*/}
-                    {/*    </Link>*/}
-                    {/*</div>*/}
+                    <div className="col">
+                        <input
+                            className="form-control"
+                            value={passCopy.userId}
+                            onChange={(e)=>setPassCopy(passCopy => ({...passCopy, userId: e.target.value}))}/>
+                    </div>
+                    <div className="col">
+                        <input
+                            className="form-control"
+                            value={passCopy.parkId}
+                            onChange={(e)=>setPassCopy(passCopy => ({...passCopy, parkId: e.target.value}))}/>
+                    </div>
                     <div className="col-2">
                         <i className="fas fa-2x fa-check float-right margin-left-10px"
                            onClick={() => {
@@ -74,7 +81,6 @@ const InlinePassEditor = ({pass, deletePass, updatePass}) => {
                             {passCopy.price}
                         </Link>
                     </div>
-
                     <div className="col">
                         <Link to={`/pass/${passCopy.id}`}>
                             {passCopy.fastPass}
@@ -85,11 +91,21 @@ const InlinePassEditor = ({pass, deletePass, updatePass}) => {
                             {passCopy.foodPack}
                         </Link>
                     </div>
-                    {/*<div className="col-1">*/}
-                    {/*    <Link to={`/passs/${passCopy.id}/`}>*/}
-                    {/*        Blogs*/}
-                    {/*    </Link>*/}
-                    {/*</div>*/}
+                    <div className="col">
+                        <Link to={`/pass/${passCopy.id}`}>
+                            {passCopy.parkId}
+                        </Link>
+                    </div>
+                    <div className="col">
+                        <Link to={`/pass/${passCopy.id}`}>
+                            {passCopy.userId}
+                        </Link>
+                    </div>
+                    <div className="col-1">
+                        <Link to={`/users/${passCopy.userId}`}>
+                            user
+                        </Link>
+                    </div>
                     <div className="col-2">
                         <i className="fas fa-cog fa-2x float-right"
                            onClick={() => setEditing(true)}></i>

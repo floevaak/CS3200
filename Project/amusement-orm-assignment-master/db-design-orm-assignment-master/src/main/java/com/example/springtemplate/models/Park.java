@@ -24,7 +24,7 @@ public class Park {
     private Integer revenue;
 
     @Column(name="lights")
-    private boolean lights;
+    private Boolean lights;
 
     private Timestamp created;
     private Timestamp updated;
@@ -40,11 +40,8 @@ public class Park {
     public void setSizeSqm(Integer sizeSqm) { this.sizeSqm = sizeSqm; }
     public Integer getRevenue() { return revenue; }
     public void setRevenue(Integer revenue) { this.revenue = revenue; }
-    public boolean getLights() {return lights; }
-
-    public void setLights(boolean lights) {
-        this.lights = lights;
-    }
+    public Boolean getLights() {return lights; }
+    public void setLights(Boolean lights) { this.lights = lights; }
 
     public Timestamp getCreated() { return created; }
     public void setCreated(Timestamp created) { this.created = created; }

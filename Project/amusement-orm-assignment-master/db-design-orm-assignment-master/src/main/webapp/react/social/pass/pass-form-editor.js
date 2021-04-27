@@ -1,7 +1,7 @@
 import passService from "./pass-service"
 
 const {useState, useEffect} = React;
-const {useParams, useHistory} = window.ReactRouterDOM;
+const {Link, useParams, useHistory} = window.ReactRouterDOM;
 const PassFormEditor = () => {
     const {id} = useParams()
     const [pass, setPass] = useState({})
@@ -19,7 +19,6 @@ const PassFormEditor = () => {
     const createPass = (pass) =>
         passService.createPass(pass)
             .then(() => history.goBack())
-
     const updatePass = (id, newPass) =>
         passService.updatePass(id, newPass)
             .then(() => history.goBack())
@@ -27,10 +26,14 @@ const PassFormEditor = () => {
     return (
         <div>
             <h2>Pass Editor</h2>
+            <Link to={`/users/${pass.userId}`}>
+                Link to User
+            </Link><br/>
+            <Link to={`/parks/${pass.parkId}`}>
+                Link to Park
+            </Link><br/>
             <label>ID</label>
             <input className = "form-control" value={pass.id}/><br/>
-
-
             <label>Description</label>
             <input
                 className = "form-control"
@@ -40,7 +43,7 @@ const PassFormEditor = () => {
                 value={pass.description}/>
             <br/>
 
-            <label>Start Date (YYYY-MM-DD)</label>
+            <label>Start Date</label>
             <input
                 className = "form-control"
                 onChange={(e) =>
@@ -48,7 +51,7 @@ const PassFormEditor = () => {
                         ({...pass, startDate: e.target.value}))}
                 value={pass.startDate}/>
             <br/>
-            <label>End Date (YYYY-MM-DD)</label>
+            <label>End Date</label>
             <input
                 className = "form-control"
                 onChange={(e) =>
@@ -66,41 +69,39 @@ const PassFormEditor = () => {
                 value={pass.price}/>
             <br/>
 
-            <label>Food Pack </label>
-            <input type="checkbox" name = "foodPack"
-                checked={pass.foodPack}
+            <label>Food Pack</label>
+            <input type="checkbox" name="foodPack"
                 onChange={(e) =>
                     setPass(pass =>
                         ({...pass, foodPack: e.target.checked}))}
-                   value={pass.foodPack}/>
+                value={pass.foodPack}/>
             <br/>
 
-            <label>Fast Pass </label>
+            <label>Fast Pass</label>
             <input type="checkbox" name="fastPass"
-                   checked={pass.fastPass}
                 onChange={(e) =>
                     setPass(pass =>
                         ({...pass, fastPass: e.target.checked}))}
-                   value={pass.fastPass}/>
+                value={pass.fastPass}/>
             <br/>
-            {/*todo, map it to park*/}
-            <label>Park ID </label>
-            <input type="number" name="parkId"
-                   checked={pass.parkId}
-                   onChange={(e) =>
-                       setPass(pass =>
-                           ({...pass, parkId: e.target.value}))}
-                   value={pass.parkId}/>
+
+            <label>User ID</label>
+            <input
+                className = "form-control"
+                onChange={(e) =>
+                    setPass(pass =>
+                        ({...pass, userId: e.target.value}))}
+                value={pass.userId}/>
             <br/>
-            {/*todo, map it to user*/}
-            <label>User ID </label>
-            <input type="number" name="userId"
-                   checked={pass.userId}
-                   onChange={(e) =>
-                       setPass(pass =>
-                           ({...pass, userId: e.target.value}))}
-                   value={pass.userId}/>
+            <label>Park ID</label>
+            <input
+                className = "form-control"
+                onChange={(e) =>
+                    setPass(pass =>
+                        ({...pass, parkId: e.target.value}))}
+                value={pass.parkId}/>
             <br/>
+
             <button
                 onClick={() => {
                     history.goBack()

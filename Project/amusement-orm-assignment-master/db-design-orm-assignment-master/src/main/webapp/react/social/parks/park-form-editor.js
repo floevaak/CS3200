@@ -1,7 +1,7 @@
 import parkService from "./park-service"
 
 const {useState, useEffect} = React;
-const {useParams, useHistory} = window.ReactRouterDOM;
+const {Link, useParams, useHistory} = window.ReactRouterDOM;
 const ParkFormEditor = () => {
     const {id} = useParams()
     const [park, setPark] = useState({})
@@ -16,7 +16,7 @@ const ParkFormEditor = () => {
             findParkById(id)
         }
     }, []);
-    const createPark = (user) =>
+    const createPark = (park) =>
         parkService.createPark(park)
             .then(() => history.goBack())
     const updatePark = (id, newPark) =>
@@ -26,13 +26,16 @@ const ParkFormEditor = () => {
     return (
         <div>
             <h2>Park Editor</h2>
+            <Link to={`/passes/`}>
+                Link to Passes
+            </Link><br/>
             <label>ID</label>
             <input className = "form-control" value={park.id}/><br/>
             <label>Name</label>
             <input
                 className = "form-control"
                 onChange={(e) =>
-                    setPark(user =>
+                    setPark(park =>
                         ({...park, name: e.target.value}))}
                 value={park.name}/>
             <br/>
@@ -60,13 +63,12 @@ const ParkFormEditor = () => {
                         ({...park, revenue: e.target.value}))}
                 value={park.revenue}/>
             <br/>
-
-            <label>Light </label>
-            <input type="checkbox" name="lights"
-                   checked={ park.lights }
+            <label>Lights</label>
+            <input
+                className = "form-control"
                 onChange={(e) =>
                     setPark(park =>
-                        ({...park, lights: e.target.checked}))}
+                        ({...park, lights: e.target.value}))}
                 value={park.lights}/>
             <br/>
             <button

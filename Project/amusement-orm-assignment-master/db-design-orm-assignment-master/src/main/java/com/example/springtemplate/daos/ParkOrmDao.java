@@ -1,7 +1,6 @@
 package com.example.springtemplate.daos;
 
 import com.example.springtemplate.models.Park;
-import com.example.springtemplate.models.User;
 import com.example.springtemplate.repositories.ParkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,49 +14,38 @@ public class ParkOrmDao {
     @Autowired
     ParkRepository parkRepository;
 
-    @PostMapping("/orm/parks")
+    @PostMapping("/api/parks")
     public Park createPark(@RequestBody Park park) {
         return parkRepository.save(park);
     }
 
-    /*
-    @GetMapping("/orm/create/park/{fn}/{ln}/{un}/{pw}")
-    public Park createPark(
-            @PathVariable("n") String name,
-            @PathVariable("f") Integer foodNum,
-            @PathVariable("s") Integer sizeSqm,
-            @PathVariable("r") Integer revenue,
-            @PathVariable("l") Boolean lights) {
-        Park park = new Park(name, foodNum, sizeSqm, revenue, lights);
-        return parkRepository.save(park);
-    }*/
-
-    @GetMapping("/orm/parks")
+    @GetMapping("/api/parks")
     public List<Park> findAllParks() {
         return parkRepository.findAllParks();
     }
 
-    @GetMapping("/orm/parks/{parkId}")
-    public Park findParkById (
-            @PathVariable("parkId") Integer parkId) {
-        return parkRepository.findParkById(parkId);
+    @GetMapping("/api/parks/{parkId}")
+    public Park findParkById(
+            @PathVariable("parkId") Integer id) {
+        return parkRepository.findParkById(id);
     }
 
-    @DeleteMapping("/orm/parks/{parkId}")
+    @DeleteMapping("/api/parks/{parkId}")
     public void deletePark(
             @PathVariable("parkId") Integer id) {
         parkRepository.deleteById(id);
     }
 
-    @PutMapping("/orm/parks/{parkId}")
+    @PutMapping("/api/parks/{parkId}")
     public Park updatePark(
-            @PathVariable("parkId") Integer id,@RequestBody Park parkUpdates) {
+            @PathVariable("parkId") Integer id,
+            @RequestBody Park parkUpdates) {
         Park park = parkRepository.findParkById(id);
-        park.setFoodNum(parkUpdates.getFoodNum());
         park.setName(parkUpdates.getName());
+        park.setFoodNum(parkUpdates.getFoodNum());
         park.setSizeSqm(parkUpdates.getSizeSqm());
-        park.setLights(parkUpdates.getLights());
         park.setRevenue(parkUpdates.getRevenue());
+        park.setLights(parkUpdates.getLights());
         return parkRepository.save(park);
     }
 }

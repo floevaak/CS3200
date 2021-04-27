@@ -1,7 +1,7 @@
 import userService from "./user-service"
 
 const {useState, useEffect} = React;
-const {useParams, useHistory} = window.ReactRouterDOM;
+const {Link, useParams, useHistory} = window.ReactRouterDOM;
 const UserFormEditor = () => {
         const {id} = useParams()
         const [user, setUser] = useState({})
@@ -26,6 +26,9 @@ const UserFormEditor = () => {
         return (
             <div>
                     <h2>User Editor</h2>
+                <Link to={`/passes/`}>
+                    Link to Passes
+                </Link><br/>
                     <label>ID</label>
                     <input className = "form-control" value={user.id}/><br/>
                     <label>First Name</label>

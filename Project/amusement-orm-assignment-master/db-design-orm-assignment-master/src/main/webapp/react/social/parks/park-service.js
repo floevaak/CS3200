@@ -1,4 +1,4 @@
-const PARKS_URL = "http://localhost:8080/orm/parks"
+const PARKS_URL = "http://localhost:8080/api/parks"
 
 // retrieve all parks from the server
 export const findAllParks = () =>

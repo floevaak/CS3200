@@ -12,16 +12,6 @@ const PassList = () => {
         passService.findAllPasses()
             .then(pass => setPass(pass))
     return(
-
-        /*
-        `id` INT NOT NULL AUTO_INCREMENT,
-                                             `price` INT NOT NULL,
-                                             `start_date` DATE NULL,
-                                             `end_date` DATE NULL,
-                                             `food_pack` BIT NOT NULL,
-                                             `fast_pass` BIT NOT NULL,
-        */
-
         <div>
             <h2>Admission Passes</h2>
             <button onClick={() => history.push("/passes/new")}>

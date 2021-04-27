@@ -20,13 +20,9 @@ const ParkList = () => {
             <ul className="list-group">
                 {
                     parks.map(park =>
-                        <li key={park.id}>
+                        <li className="list-group-item" key={park.id}>
                             <Link to={`/parks/${park.id}`}>
-                                {park.name},
-                                {park.foodNum},
-                                {park.sizeSqm},
-                                {park.revenue},
-                                {park.lights}
+                                {park.name}
                             </Link>
                         </li>)
                 }

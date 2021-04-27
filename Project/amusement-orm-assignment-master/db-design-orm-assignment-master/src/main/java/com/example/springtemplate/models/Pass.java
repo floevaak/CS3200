@@ -59,11 +59,16 @@ public class Pass {
     public void setUserId(Integer userId) {this.userId = userId; }
     public Integer getParkId() {return parkId; }
     public void setParkId(Integer parkId) {this.parkId = parkId; }
-
     public Timestamp getCreated() { return created; }
     public void setCreated(Timestamp created) { this.created = created; }
     public Timestamp getUpdated() { return updated; }
     public void setUpdated(Timestamp updated) { this.updated = updated; }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     // constructor
     public Pass(Integer price, String startDate, String endDate, Boolean foodPack,
@@ -81,11 +86,4 @@ public class Pass {
     public Pass() {
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
